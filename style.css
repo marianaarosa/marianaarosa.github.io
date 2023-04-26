@@ -3,60 +3,53 @@ body {
 }
 
 h1 {
-  margin-top: 60px; /* adiciona 50 pixels de espaço acima do elemento h1 */
-  margin-bottom: 60px;
   text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
   font-size: 32px;
   font-weight: 500;
   color: rgb(42, 112, 116);
 }
 
+
+.typewriter::after {
+  content: "";
+  display: inline-block;
+  width: 0.1em;
+  height: 1em;
+  margin-left: 0.1em;
+  background-color: rgb(42, 112, 116);
+  animation: typing 0.5s infinite alternate;
+}
+@keyframes typing {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+
+
 h2 {
   color: rgb(42, 112, 116);
-}
-
-.menu {
-  display: flex;
-}
-
-.menu a {
-  text-decoration: none;
-  align-items: center;
-  padding: 15px;
-  background: rgb(85, 232, 237);
-  color: #fff;
-  border-radius: 5px;
-  margin: 3px 10px 5px 5px;
-
+  font-size: 22px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.item:nth-child(1),
-.item:nth-child(2) {
-  margin-right: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mudei para usar auto-fit para criar quantas colunas forem possíveis com um tamanho mínimo de 300px */
+  grid-gap: 20px;
 }
 
 .item {
   background: rgb(243, 249, 245);
   margin: 3px;
   border: 1px;
-  padding: 15px;
+  padding: 12px;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  
-}
-
-.imagem{
-  width: 40px;
-  height: 40px;
-  margin-left: 290px;
 }
 
 .item a {
@@ -71,15 +64,31 @@ h2 {
   transform: translateY(-6px) scale(1.05);
 }
 
+.imagem{
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+ /*  display: block; Adicionei essa propriedade para centralizar as imagens horizontalmente */
+}
+
 footer {
   text-align: center;
   font-size: 16px;
   font-weight: 600;
-  position: absolute;
   padding: 6px 2px 2px 2px;
-  color:rgb(67, 180, 184);
-  bottom: 0;
-  width: 100%;
-  height: 2.2rem;  
+  color: rgb(67, 180, 184);
   margin-top: 10px;
 }
+
+/*
+footer::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  padding: 1px;
+  margin-left: 600px;
+  background: rgb(42, 112, 116);
+}
+*/
