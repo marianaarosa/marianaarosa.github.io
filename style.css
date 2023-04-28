@@ -61,7 +61,9 @@ h2 {
 }
 
 .item:hover {
+  
   transform: translateY(-6px) scale(1.05);
+  box-shadow: 5px 5px 10px rgb(67, 180, 184);
 }
 
 .imagem{
