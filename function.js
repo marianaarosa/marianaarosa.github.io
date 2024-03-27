@@ -1,4 +1,4 @@
-const title = "Projetos GitHub @marianaarosa";
+const title = "Projetos GitHub @codemariana";
 
 function typeWriter(element, text, speed) {
   let i = 0;
